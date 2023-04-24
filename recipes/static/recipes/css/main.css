@@ -143,3 +143,50 @@ p.label--directions {
 }
 
 
+@media all and (max-width: 61.25em){
+    .main__container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (max-width: 35.94em) {
+    .main__container {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .detail__container {
+        flex-direction: column;
+    }
+
+
+}
+
+@media all and (max-width: 35.94em) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .detail__img-box {
+        text-align: center;
+        height: 15rem;
+        margin-bottom: 3rem;
+    }
+
+    .detail__info {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .detail__directions {
+        padding-left: 0;
+    }
+
+    .detail__img-box {
+        margin-top: 3rem;
+    }
+}
+
+

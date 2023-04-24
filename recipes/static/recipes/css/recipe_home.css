@@ -136,6 +136,13 @@ h2 {
     color: var(--color-green);
 }
 
+footer {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #444;
+    padding: 2rem 0;
+}
+
 @keyframes fadeInBottom {
     0% {
         opacity: 0;

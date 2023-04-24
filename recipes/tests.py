@@ -4,7 +4,7 @@ from .models import Recipe
 # Create your tests here.
 class RecipeModelTest(TestCase):
     def setUpTestData():
-        Recipe.objects.create(name='Latte', cooking_time=3, ingredients='Grounded Coffee, Boiled Water, Warm Milk, Sugar', description='1. Make filtered coffee 2. Add warm milk 3. Add sugar')
+        Recipe.objects.create(name='Latte', category='dessert', cooking_time=3, serving=1, ingredients='Grounded Coffee, Boiled Water, Warm Milk, Sugar', directions='1. Make filtered coffee 2. Add warm milk 3. Add sugar')
 
     def test_recipe_name_label(self):
         recipe = Recipe.objects.get(id=1)
@@ -29,4 +29,8 @@ class RecipeModelTest(TestCase):
     def test_calculte_difficulty(self):
         recipe = Recipe.objects.get(id=1)
         self.assertEqual(recipe.calculate_difficulty(), 'Medium')
+
+    def text_get_absolute_url(self):
+        recipe = Recipe.objects.get(id=1)
+        self.assertEqual(recipe.get_absolute_url, '/recipes/1')
 
