@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,17 +8,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe App Home</title>
-    <style>
-        body {
-            text-align: center;
-            padding: 10vw;
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'recipes/css/recipe_home.css' %}">
 </head>
 
 <body>
-    <h1>Welcome to Recipe App</h1>
-    <h2>Login to your accounts to see our list of recipes</h2>
+    <header>
+        <nav>
+            <p>Recipe App</p>
+            <div role="menubar" class="nav__items">
+                <ul class="nav-list">
+                    <li role="presentation">
+                        <a href="#" role="menuitem">Log in</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" role="menuitem">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="main-img__box">
+            <picture>
+                <source srcset="{% static 'recipes/images/cooking-mobile.jpg'%}" media="(max-width: 50.25em)">
+                <img src="{% static 'recipes/images/cooking.jpg'%}" alt="cooking">
+            </picture>
+        </div>
+        <div class="main-content">
+            <h2>
+                <q>Every recipes, created by millions of home cooks.</q>
+            </h2>
+            <h1>What shall we cook?</h1>
+            <a href="#" class="start__btn">Get started / Log in</a>
+            <a href="#" class="signup__link">Create an account</a>
+        </div>
+    </main>
 </body>
 
 </html>

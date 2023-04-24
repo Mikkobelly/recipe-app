@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{object.name}} Recipe</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'recipes/css/main.css' %}">
+</head>
+
+<body>
+    <h1 class="detail__title">{{object.name}} Recipe</h1>
+    <main class="detail__container">
+        <section class="detail__info">
+            <p><span class="label">Category:</span>{{object.category}}</p>
+            <p><span class="label">Serving:</span>{{object.serving}}</p>
+            <p><span class="label">Cooking Time:</span>{{object.cooking_time}} mins</p>
+            <p><span class="label">Difficulty:</span>{{object.calculate_difficulty}}</p>
+            <p class="label--ingredients"><span class="label">Ingredients:</span></p>
+            <p>{{object.ingredients}}</p>
+        </section>
+        <section class="detail__directions">
+            <div class="detail__img-box">
+                <img src="{{object.pic.url}}" alt="{{object.name}}">
+            </div>
+            <p class="label--directions"><span class="label">Directions:</span></p>
+            <p>
+                {{object.directions}}
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
