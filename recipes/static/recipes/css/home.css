@@ -1,77 +1,5 @@
-:root {
-    --color-primary-black: #222;
-    --color-black-light: #444;
-    --color-green: rgb(59, 159, 89);
-
-    --transition-primary: .2s all ease-in-out;
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-size: 1.6rem;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: var(--color-primary-black);
-    letter-spacing: 1px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-}
-
-nav p {
-    font-family: 'Libre Baskerville';
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-right: auto;
-    padding: 2.5rem;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-.nav-list li {
-    padding: 1rem 0;
-    margin-right: 2rem;
-    border-bottom: 1px solid transparent;
-    transition: var(--transition-primary);
-}
-
-.nav-list li:hover {
-    border-bottom: 1px solid  var(--color-green);
-    cursor: pointer;
-}
-
-.nav-list li a:link,
-.nav-list li a:visited {
-    text-decoration: none;
-    font-size: 1.8rem;
-    color: var(--color-primary-black);
-}
-
 .main-container {
     display: flex;
-}
-
-
-h1, h2 {
-    font-family: 'Libre Baskerville', serif;
 }
 
 h1 {
@@ -136,12 +64,6 @@ h2 {
     color: var(--color-green);
 }
 
-footer {
-    text-align: center;
-    font-size: 1.4rem;
-    color: #444;
-    padding: 2rem 0;
-}
 
 @keyframes fadeInBottom {
     0% {

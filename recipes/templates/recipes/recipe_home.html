@@ -14,20 +14,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'recipes/css/recipe_home.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'recipes/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/css/home.css' %}">
 </head>
 
 <body>
     <header>
         <nav>
-            <p>Recipe App</p>
+            <p><a href="{% url 'recipes:list' %}">Recipe App</a></p>
             <div role="menubar" class="nav__items">
                 <ul class="nav-list">
                     <li role="presentation">
                         <a href="#" role="menuitem">Log in</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#" role="menuitem">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -46,10 +45,11 @@
                 <q>Every recipes, created by millions of home cooks.</q>
             </h2>
             <h1>What shall we cook?</h1>
-            <a href="#" class="start__btn">Get started / Log in</a>
-            <a href="#" class="signup__link">Create an account</a>
+            <a href="{% url 'login' %}" class="start__btn">Get started / Log in</a>
+            <a href="{% url 'recipes:list' %}" class="signup__link">Already logged in? See all reipces</a>
         </div>
     </main>
+
     <footer>
         <small>&copy; Miki Akuta 2023</small>
     </footer>

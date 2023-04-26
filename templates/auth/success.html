@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe List</title>
+    <title>Logged Out</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'recipes/css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'recipes/css/recipe.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/css/auth.css' %}">
 </head>
 
 <body>
@@ -25,29 +25,19 @@
             <div role="menubar" class="nav__items">
                 <ul class="nav-list">
                     <li role="presentation">
-                        <a href="{% url 'logout' %}">Logout</a>
+                        <a href="{% url 'login' %}">Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <h1 class="main__title"></h1>
-    <main class="main__container">
-        {% for object in object_list %}
-        <div class="recipe__card">
-            <div class="recipe__img-box">
-                <img src="{{object.pic.url}}" alt="{{object.name}}" width="150">
-            </div>
-            <div class="inner__container">
-                <a href="{{object.get_absolute_url}}">
-                    <h3 class="recipe__name">{{object.name}}</h3>
-                </a>
-                <p class="recipe__difficulty">{{object.calculate_difficulty}}</p>
-            </div>
+    <div class="img-bg--success">
+        <div class="msg__container">
+            <h1 class="success__title">You've successfully logged out!</h1>
+            <a href="{% url 'login' %}" class="login__btn">Log in</a>
         </div>
-        {% endfor %}
-    </main>
+    </div>
 
     <footer>
         <small>&copy; Miki Akuta 2023</small>

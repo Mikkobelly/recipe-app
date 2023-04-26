@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'recipes/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/css/auth.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p><a href="{% url 'recipes:list' %}">Recipe App</a></p>
+        </nav>
+    </header>
+
+    <div class="img-bg--login">
+        <h1 class="login__title">Login</h1>
+        <main class="main__container">
+            {% if error_message %}
+            <div class="err-msg__container">
+                {{ error_message }}
+            </div>
+            {% endif %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Login</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <small>&copy; Miki Akuta 2023</small>
+    </footer>
+</body>
+
+</html>

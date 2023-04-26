@@ -13,10 +13,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;700&display=swap"
         rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'recipes/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/css/recipe.css' %}">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <p><a href="{% url 'recipes:list' %}">Recipe App</a></p>
+            <div role="menubar" class="nav__items">
+                <ul class="nav-list">
+                    <li role="presentation">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <h1 class="detail__title">{{object.name}} Recipe</h1>
     <main class="detail__container">
         <section class="detail__info">
@@ -37,6 +52,10 @@
             </p>
         </section>
     </main>
+
+    <footer>
+        <small>&copy; Miki Akuta 2023</small>
+    </footer>
 </body>
 
 </html>
