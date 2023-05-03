@@ -21,9 +21,12 @@
 <body>
     <header>
         <nav>
-            <p><a href="{% url 'recipes:list' %}">Recipe App</a></p>
+            <p><a href="{% url 'recipes:home' %}">Recipe App</a></p>
             <div role="menubar" class="nav__items">
                 <ul class="nav-list">
+                    <li role="presentation">
+                        <a href="{% url 'recipes:records' %}">Search</a>
+                    </li>
                     <li role="presentation">
                         <a href="{% url 'logout' %}">Logout</a>
                     </li>

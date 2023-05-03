@@ -1,0 +1,103 @@
+.records__title {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.records__container {
+    width: 90vw;
+    margin: 4rem auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+    max-width: 80rem;
+    margin: 0 auto 3rem;
+    background-color: rgba(255, 255, 255, 0.717);
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 7px rgba(221, 221, 221, 0.784);
+}
+
+form label {
+    margin-right: .5rem;
+}
+
+form select {
+    margin-right: 1.8rem;
+    height: 3rem;
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    padding: .5rem .8rem;
+}
+
+form select:focus {
+    outline: 1px solid rgb(59, 159, 89);
+    border: none;
+}
+
+form button {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    letter-spacing: inherit;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color:  var(--color-green);
+    margin-bottom: 2rem;
+    transition: .2s all ease-in-out;
+}
+
+form button:hover {
+    cursor: pointer;
+    filter: brightness(1.25);
+}
+
+table {
+    margin: 0 auto;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 0.5rem 0.8rem;
+}
+
+img {
+    display: block;
+    margin: 3rem auto;
+}
+
+@media all and (max-width: 40em) {
+
+    form {
+        flex-direction: column;
+        padding: 2.5rem 3.5rem;
+    }
+
+    form select {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    form button {
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 26.875em) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        padding: 1.5rem 2.2rem;
+    }
+}

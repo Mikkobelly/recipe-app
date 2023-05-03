@@ -131,24 +131,24 @@ p.label--directions {
         flex-direction: column;
     }
 
+    .detail__info {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
 
 }
 
 @media all and (max-width: 26.875em) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .detail__img-box {
         text-align: center;
         height: 15rem;
         margin-bottom: 3rem;
-    }
-
-    .detail__info {
-        padding-right: 0;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
     }
 
     .detail__directions {
