@@ -2,7 +2,7 @@
 
 ## Overview
 
-Recipe App is a full stack application built by Python using Django web framework and it comes with the admin panel to perform CRUD operations on the database. Upon signning up, users can create / modify their own content including recipe's name, cooking time, ingredients and description as well as search for specific recipes according to ingredients.
+Recipe App is a full stack application built by Python using Django web framework and it comes with the admin panel to perform CRUD operations on the database. With Django's user authentication and view protection, only registered users have access to the recipes list and its details. The app also provides the feature for searching recipes by difficulty level and gives the data visualization as the selected type of chart. 
 
 ## Key features
 
@@ -13,4 +13,4 @@ Recipe App is a full stack application built by Python using Django web framewor
 
 ## Technologies
 
-Python, Django
+Python, Django, pandas, matplotlib
