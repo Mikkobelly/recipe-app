@@ -6,10 +6,9 @@ Recipe App is a full stack application built by Python using Django web framewor
 
 ## Key features
 
-- Users can search for recipes according to ingredients
-- Automatically rate each recipe by difficulty level
+- Display all recipes upon logging in
 - Display details on each recipe upon selection
-- Show statistics and visualizaions based on trends and data analysis
+- Show statistics and data visualizaions based on user's search criteria
 
 ## Technologies
 
