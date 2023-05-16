@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe List</title>
+    <title>About me</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
         rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'recipes/css/recipe.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
 </head>
 
 <body>
@@ -25,34 +26,42 @@
             <div role="menubar" class="nav__items">
                 <ul class="nav-list">
                     <li role="presentation">
-                        <a href="{% url 'about' %}">About</a>
+                        <a href="{% url 'recipes:list' %}">Recipes</a>
                     </li>
                     <li role="presentation">
                         <a href="{% url 'recipes:records' %}">Search</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="{% url 'logout' %}">Logout</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <h1 class="main__title"></h1>
-    <main class="main__container">
-        {% for object in object_list %}
-        <div class="recipe__card">
-            <div class="recipe__img-box">
-                <img src="{{object.pic.url}}" alt="{{object.name}}" width="150">
+    <main class="about__container">
+        <h1 class="about__title">Miki Akuta</h1>
+        <h2>Developer of the Recipe App</h2>
+        <p class="bio">
+            Hi, I am an adventurous and creative web developer from Japan. I stepped into the world of software
+            development
+            after being a professional ballet dancer for 8 years.
+            I was able to hone my skills as an artist and bring inspiration to my parts. Now as a web
+            developer, I enjoy to continue evolving in a new form of art using my versatile skill.
+            I am keen to put my vision, ideas and artistic talent to enhance the way technology is used and collaborate
+            with people who are passionate about pursuing their creative dreams!
+        </p>
+        <div class="imgs__container">
+            <div>
+                <img src="{% static 'images/Miki_chair_resized.jpg' %}" alt="Miki's photoshot with chair"
+                    class="img--1">
             </div>
-            <div class="inner__container">
-                <a href="{{object.get_absolute_url}}">
-                    <h3 class="recipe__name">{{object.name}}</h3>
-                </a>
-                <p class="recipe__difficulty">{{object.calculate_difficulty}}</p>
+            <div>
+                <img src="{% static 'images/Miki_DL_resized.jpg' %}"
+                    alt="Miki's photoshot in ballet 'Dangerous Liaisons'" class="img--2">
             </div>
         </div>
-        {% endfor %}
+        <div class="link__box">
+            <a href="https://mikkobelly.github.io/MySite/" target="_blank" class="portfolio__link">Check out my
+                portfolio</a>
+        </div>
     </main>
 
     <footer>

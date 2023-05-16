@@ -38,10 +38,14 @@ def records(request):
 
         if qs:
             recipes_df = pd.DataFrame(qs.values())
+            # Hide 'direction' and 'pic' fields
+            recipes_df = recipes_df.loc[:, ~recipes_df.columns.isin(['directions', 'pic'])]
             chart = get_chart(chart_type, recipes_df, labels=recipes_df['category'].values)
             recipes_df = recipes_df.to_html()
         elif difficulty == 'all':
             recipes_df = pd.DataFrame(all_records.values())
+            # Hide 'direction' and 'pic' fields
+            recipes_df = recipes_df.loc[:, ~recipes_df.columns.isin(['directions', 'pic'])]
             chart = get_chart(chart_type, recipes_df, labels=recipes_df['category'].values)
             recipes_df = recipes_df.to_html()
 

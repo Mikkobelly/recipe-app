@@ -76,11 +76,25 @@ nav p a:visited {
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.4rem;
     color: #444;
     padding: 2rem 0;
     margin-top: auto;
+}
+
+.media {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    margin-left: 2rem;
+    transition: var(--transition-primary);
+}
+
+.media:hover {
+    fill: var(--color-green)
 }
 
 h1, h2 {

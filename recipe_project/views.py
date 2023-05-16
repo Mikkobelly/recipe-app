@@ -32,3 +32,6 @@ def logout_view(request):
     logout(request)
     return render(request, 'auth/success.html')
 
+def about_view(request):
+    return render(request, 'about.html')
+

@@ -33,7 +33,8 @@ class RecipeModelTest(TestCase):
 
     def test_get_absolute_url(self):
         recipe = Recipe.objects.get(id=1)
-        self.assertEqual(recipe.get_absolute_url, '/recipes/1')
+        print(recipe)
+        self.assertEqual(recipe.get_absolute_url(), '/recipes/1')
 
 
 class RecipeFormTest(TestCase):
