@@ -43,7 +43,7 @@
         {% for object in object_list %}
         <div class="recipe__card">
             <div class="recipe__img-box">
-                <img src="{{object.pic.url}}" alt="{{object.name}}" width="150">
+                <img src="{{object.pic}}" alt="{{object.name}}" width="150">
             </div>
             <div class="inner__container">
                 <a href="{{object.get_absolute_url}}">
