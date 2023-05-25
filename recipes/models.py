@@ -15,7 +15,7 @@ class Recipe(models.Model):
     serving = models.PositiveIntegerField(default=1)
     ingredients = models.CharField(max_length=350, help_text='Ingredients must be separated by commas')
     directions = models.TextField()
-    pic = models.ImageField(upload_to='recipes', default='no-image.jpg')
+    pic = models.URLField(default='https://liftlearning.com/wp-content/uploads/2020/09/default-image.png')
 
     def calculate_difficulty(self):
         ingredients = self.ingredients.split(', ')
