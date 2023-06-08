@@ -13,3 +13,11 @@ Recipe App is a full stack application built by Python using Django web framewor
 ## Technologies
 
 Python, Django, pandas, matplotlib
+
+## App Showcase
+
+<img alt="A screenshot of Recipe App homepage" src="/media/recipe-app_home.png" width="100%">
+<img alt="A screenshot of Recipe App main page displaying list of recipes" src="/media/recipe-app_main.png" width="100%">
+<img alt="A screenshot of Recipe App details page" src="/media/recipe-app_details.png" width="100%">
+<img alt="A screenshot of Recipe App search page with data visualization" src="/media/recipe-app_search.png" width="100%">
+
